@@ -8,11 +8,11 @@ const msg2 = document.querySelector("#msg-2");
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const location = search.value;
-
+  heroku;
   msg1.textContent = "Loading...";
   msg2.textContent = "";
 
-  fetch(`http://localhost:3000/weather?address=${location}`).then((res) => {
+  fetch(`/weather?address=${location}`).then((res) => {
     res.json().then((data) => {
       if (data.err) {
         msg1.textContent = data.err;
